@@ -79,17 +79,16 @@ export default function App() {
           fieldset.disabled = true
 
           try {
-            await window.contract.nft_mint({
-              token_id: '0',
-              receiver_id: window.accountId,
-              token_metadata: {
-                title: 'Christmass rabbit',
-                description: 'Funny rabbit my daughter has drawn',
-                media: 'https://bafybeif7e52f57uxxbr5hu7yu7ujolw3zmskzocqaq4q7tflrj2c6fdxqm.ipfs.dweb.link/',
-                copies: 1
-              },
-              deposit: 10
-            })
+            await window.contract.nft_mint(
+              {
+                receiver_id: window.accountId,
+                token_id: `${Math.floor(Math.random() * 10)}`,
+                token_metadata: {
+                  title: 'Christmass rabbit',
+                  media: `https://bafybeif7e52f57uxxbr5hu7yu7ujolw3zmskzocqaq4q7tflrj2c6fdxqm.ipfs.dweb.link/`,
+                  copies: 1
+                }
+              }, '100000000000000', '10000000000000000000000')
           } catch (e) {
             alert(
               'Something went wrong! ' +

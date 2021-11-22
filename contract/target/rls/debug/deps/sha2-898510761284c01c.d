@@ -1,0 +1,12 @@
+/Users/vadkutsen/rust/near/near-challenge-5/contract/target/rls/debug/deps/sha2-898510761284c01c.rmeta: /Users/vadkutsen/.cargo/registry/src/github.com-1ecc6299db9ec823/sha2-0.9.8/src/lib.rs /Users/vadkutsen/.cargo/registry/src/github.com-1ecc6299db9ec823/sha2-0.9.8/src/consts.rs /Users/vadkutsen/.cargo/registry/src/github.com-1ecc6299db9ec823/sha2-0.9.8/src/sha256.rs /Users/vadkutsen/.cargo/registry/src/github.com-1ecc6299db9ec823/sha2-0.9.8/src/sha512.rs /Users/vadkutsen/.cargo/registry/src/github.com-1ecc6299db9ec823/sha2-0.9.8/src/sha256/soft.rs /Users/vadkutsen/.cargo/registry/src/github.com-1ecc6299db9ec823/sha2-0.9.8/src/sha256/x86.rs /Users/vadkutsen/.cargo/registry/src/github.com-1ecc6299db9ec823/sha2-0.9.8/src/sha512/soft.rs /Users/vadkutsen/.cargo/registry/src/github.com-1ecc6299db9ec823/sha2-0.9.8/src/sha512/x86.rs
+
+/Users/vadkutsen/rust/near/near-challenge-5/contract/target/rls/debug/deps/sha2-898510761284c01c.d: /Users/vadkutsen/.cargo/registry/src/github.com-1ecc6299db9ec823/sha2-0.9.8/src/lib.rs /Users/vadkutsen/.cargo/registry/src/github.com-1ecc6299db9ec823/sha2-0.9.8/src/consts.rs /Users/vadkutsen/.cargo/registry/src/github.com-1ecc6299db9ec823/sha2-0.9.8/src/sha256.rs /Users/vadkutsen/.cargo/registry/src/github.com-1ecc6299db9ec823/sha2-0.9.8/src/sha512.rs /Users/vadkutsen/.cargo/registry/src/github.com-1ecc6299db9ec823/sha2-0.9.8/src/sha256/soft.rs /Users/vadkutsen/.cargo/registry/src/github.com-1ecc6299db9ec823/sha2-0.9.8/src/sha256/x86.rs /Users/vadkutsen/.cargo/registry/src/github.com-1ecc6299db9ec823/sha2-0.9.8/src/sha512/soft.rs /Users/vadkutsen/.cargo/registry/src/github.com-1ecc6299db9ec823/sha2-0.9.8/src/sha512/x86.rs
+
+/Users/vadkutsen/.cargo/registry/src/github.com-1ecc6299db9ec823/sha2-0.9.8/src/lib.rs:
+/Users/vadkutsen/.cargo/registry/src/github.com-1ecc6299db9ec823/sha2-0.9.8/src/consts.rs:
+/Users/vadkutsen/.cargo/registry/src/github.com-1ecc6299db9ec823/sha2-0.9.8/src/sha256.rs:
+/Users/vadkutsen/.cargo/registry/src/github.com-1ecc6299db9ec823/sha2-0.9.8/src/sha512.rs:
+/Users/vadkutsen/.cargo/registry/src/github.com-1ecc6299db9ec823/sha2-0.9.8/src/sha256/soft.rs:
+/Users/vadkutsen/.cargo/registry/src/github.com-1ecc6299db9ec823/sha2-0.9.8/src/sha256/x86.rs:
+/Users/vadkutsen/.cargo/registry/src/github.com-1ecc6299db9ec823/sha2-0.9.8/src/sha512/soft.rs:
+/Users/vadkutsen/.cargo/registry/src/github.com-1ecc6299db9ec823/sha2-0.9.8/src/sha512/x86.rs:
