@@ -46775,7 +46775,7 @@ __exportStar(require("./browser-connect"), exports);
 require("error-polyfill");
 
 },{"./key_stores/browser-index":"../node_modules/near-api-js/lib/key_stores/browser-index.js","./common-index":"../node_modules/near-api-js/lib/common-index.js","./browser-connect":"../node_modules/near-api-js/lib/browser-connect.js","error-polyfill":"../node_modules/error-polyfill/index.js"}],"config.js":[function(require,module,exports) {
-const CONTRACT_NAME = "dev-1637596505657-25723098775254" || 'near-challenge-5';
+const CONTRACT_NAME = "dev-1637596505657-25723098775254" || 'challenge5.spooky.testnet';
 
 function getConfig(env) {
   switch (env) {
@@ -47044,16 +47044,14 @@ function App() {
 
         try {
           await window.contract.nft_mint({
-            token_id: '0',
             receiver_id: window.accountId,
+            token_id: `${Math.floor(Math.random() * 10)}`,
             token_metadata: {
               title: 'Christmass rabbit',
-              description: 'Funny rabbit my daughter has drawn',
-              media: 'https://bafybeif7e52f57uxxbr5hu7yu7ujolw3zmskzocqaq4q7tflrj2c6fdxqm.ipfs.dweb.link/',
+              media: `https://bafybeif7e52f57uxxbr5hu7yu7ujolw3zmskzocqaq4q7tflrj2c6fdxqm.ipfs.dweb.link/`,
               copies: 1
-            },
-            deposit: 10
-          });
+            }
+          }, '100000000000000', '10000000000000000000000');
         } catch (e) {
           alert('Something went wrong! ' + 'Maybe you need to sign out and back in? ' + 'Check your browser console for more info.');
           throw e;
@@ -47139,7 +47137,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61148" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58743" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
