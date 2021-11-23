@@ -15,6 +15,7 @@ export default function App() {
 
   // after submitting the form, we want to show Notification
   const [showNotification, setShowNotification] = React.useState(false)
+  const [isMinted, setIsMinted] = React.useState(false)
 
   // The useEffect hook can be used to fire side-effects during render
   // Learn more: https://reactjs.org/docs/hooks-intro.html
@@ -60,63 +61,72 @@ export default function App() {
       </button>
       <main>
         <img className="nft" src={IMAGE_LINK} />
-        Hi
-          {' '/* React trims whitespace around tags; insert literal space character when needed */}
-          {window.accountId}!
-        <p>Like the rabbit my daughter has drawn? Mint it!</p>
+        
+        {isMinted ?
+          <div className="before">
+            Hi
+              {' '/* React trims whitespace around tags; insert literal space character when needed */}
+              {window.accountId}!
+            <p>Like the rabbit my daughter has drawn? Mint it!</p>
 
-        <form onSubmit={async event => {
-          event.preventDefault()
+            <form onSubmit={async event => {
+              event.preventDefault()
 
-          // get elements from the form using their id attribute
-          // const { fieldset, greeting } = event.target.elements
+              // get elements from the form using their id attribute
+              // const { fieldset, greeting } = event.target.elements
 
-          // hold onto new user-entered value from React's SynthenticEvent for use after `await` call
-          // const newGreeting = greeting.value
+              // hold onto new user-entered value from React's SynthenticEvent for use after `await` call
+              // const newGreeting = greeting.value
 
-          // disable the form while the value gets updated on-chain
-          fieldset.disabled = true
+              // disable the form while the value gets updated on-chain
+              fieldset.disabled = true
 
-          try {
-            await window.contract.nft_mint(
-              {
-                receiver_id: window.accountId,
-                token_id: `${Math.floor(Math.random() * 10)}`,
-                metadata: {
-                  title: 'Christmass rabbit',
-                  media: IMAGE_LINK,
-                  copies: 1
-                }
-              }, '100000000000000', '10000000000000000000000')
-          } catch (e) {
-            alert(
-              'Something went wrong! ' +
-              'Maybe you need to sign out and back in? ' +
-              'Check your browser console for more info.'
-            )
-            throw e
-          } finally {
-            // re-enable the form, whether the call succeeded or failed
-            fieldset.disabled = false
-          }
+              try {
+                await window.contract.nft_mint(
+                  {
+                    receiver_id: window.accountId,
+                    token_id: `${Math.floor(Math.random() * 10)}`,
+                    metadata: {
+                      title: 'Christmass rabbit',
+                      media: IMAGE_LINK,
+                      copies: 1
+                    }
+                  }, '100000000000000', '10000000000000000000000')
+              } catch (e) {
+                alert(
+                  'Something went wrong! ' +
+                  'Maybe you need to sign out and back in? ' +
+                  'Check your browser console for more info.'
+                )
+                throw e
+              } finally {
+                // re-enable the form, whether the call succeeded or failed
+                fieldset.disabled = false
+              }
 
-          // show Notification
-          setShowNotification(true)
-
-          // remove Notification again after css animation completes
-          // this allows it to be shown again next time the form is submitted
-          setTimeout(() => {
-            setShowNotification(false)
-          }, 11000)
-        }}>
-          <fieldset id="fieldset">
-              <button
-                disabled={buttonDisabled}
-              >
-                Mint
-              </button>
-          </fieldset>
-        </form>
+              // show Notification
+              setShowNotification(true)
+              setIsMinted(true)
+              // remove Notification again after css animation completes
+              // this allows it to be shown again next time the form is submitted
+              setTimeout(() => {
+                setShowNotification(false)
+              }, 11000)
+            }}>
+              <fieldset id="fieldset">
+                  <button
+                    disabled={buttonDisabled}
+                  >
+                    Mint
+                  </button>
+              </fieldset>
+            </form>
+          </div>
+        :
+          <div className="after">
+            <p>Find your new NFT in your <a target="_blank" rel="noreferrer" href={`${urlPrefix}/${window.accountId}`}>wallet</a></p>
+          </div>
+        }
       </main>
       {showNotification && <Notification />}
     </>
