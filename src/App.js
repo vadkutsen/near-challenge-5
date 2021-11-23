@@ -70,7 +70,7 @@ export default function App() {
               event.preventDefault()
 
               // get elements from the form using their id attribute
-              // const { fieldset, greeting } = event.target.elements
+              const { fieldset } = event.target.elements
 
               // hold onto new user-entered value from React's SynthenticEvent for use after `await` call
               // const newGreeting = greeting.value
@@ -82,7 +82,7 @@ export default function App() {
                 await window.contract.nft_mint(
                   {
                     receiver_id: window.accountId,
-                    token_id: `${Math.floor(Math.random() * 10)}`,
+                    token_id: + new Date(),//`${Math.floor(Math.random() * 10000)}`,
                     metadata: {
                       title: 'Christmass rabbit',
                       media: IMAGE_LINK,
