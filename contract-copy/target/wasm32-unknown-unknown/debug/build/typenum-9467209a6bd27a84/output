@@ -1,2 +1,0 @@
-cargo:rustc-env=TYPENUM_BUILD_CONSTS=/Users/vadkutsen/rust/near/near-challenge-5/contract/target/wasm32-unknown-unknown/debug/build/typenum-9467209a6bd27a84/out/consts.rs
-cargo:rustc-env=TYPENUM_BUILD_OP=/Users/vadkutsen/rust/near/near-challenge-5/contract/target/wasm32-unknown-unknown/debug/build/typenum-9467209a6bd27a84/out/op.rs
