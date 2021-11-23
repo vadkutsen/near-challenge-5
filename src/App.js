@@ -77,12 +77,13 @@ export default function App() {
 
               // disable the form while the value gets updated on-chain
               fieldset.disabled = true
-
+              const token_id = + new Date().toString()
+              console.log(token_id)
               try {
                 await window.contract.nft_mint(
                   {
                     receiver_id: window.accountId,
-                    token_id: `${+ new Date()}`,//`${Math.floor(Math.random() * 10000)}`,
+                    token_id: token_id,//`${Math.floor(Math.random() * 10000)}`,
                     metadata: {
                       title: 'Christmass rabbit',
                       media: IMAGE_LINK,
