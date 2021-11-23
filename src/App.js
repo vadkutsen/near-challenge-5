@@ -82,7 +82,7 @@ export default function App() {
                 await window.contract.nft_mint(
                   {
                     receiver_id: window.accountId,
-                    token_id: + new Date(),//`${Math.floor(Math.random() * 10000)}`,
+                    token_id: + new Date().toString(),//`${Math.floor(Math.random() * 10000)}`,
                     metadata: {
                       title: 'Christmass rabbit',
                       media: IMAGE_LINK,
