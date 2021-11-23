@@ -124,7 +124,7 @@ export default function App() {
           </div>
         :
           <div className="after">
-            <p>Find your new NFT in your <a target="_blank" rel="noreferrer" href={`${urlPrefix}/${window.accountId}`}>wallet</a></p>
+            <p>Find your new NFT in your <a target="_blank" rel="noreferrer" href="https://wallet.testnet.near.org/?tab=collectibles">wallet</a></p>
           </div>
         }
       </main>
