@@ -5,7 +5,7 @@ import './global.css'
 
 import getConfig from './config'
 const { networkId } = getConfig(process.env.NODE_ENV || 'development')
-
+const IMAGE_LINK = 'https://bafybeif7e52f57uxxbr5hu7yu7ujolw3zmskzocqaq4q7tflrj2c6fdxqm.ipfs.dweb.link/'
 export default function App() {
   // use React Hooks to store greeting in component state
   // const [greeting, set_greeting] = React.useState()
@@ -60,7 +60,7 @@ export default function App() {
       </button>
       <main>
         <h1></h1>
-        <img className="nft" src="https://bafybeif7e52f57uxxbr5hu7yu7ujolw3zmskzocqaq4q7tflrj2c6fdxqm.ipfs.dweb.link/" />
+        <img className="nft" src={IMAGE_LINK} />
         Hi
           {' '/* React trims whitespace around tags; insert literal space character when needed */}
           {window.accountId}!
@@ -85,7 +85,7 @@ export default function App() {
                 token_id: `${Math.floor(Math.random() * 10)}`,
                 token_metadata: {
                   title: 'Christmass rabbit',
-                  media: `https://bafybeif7e52f57uxxbr5hu7yu7ujolw3zmskzocqaq4q7tflrj2c6fdxqm.ipfs.dweb.link/`,
+                  media: IMAGE_LINK,
                   copies: 1
                 }
               }, '100000000000000', '10000000000000000000000')

@@ -57,8 +57,8 @@ impl Contract {
             owner_id,
             NFTContractMetadata {
                 spec: NFT_METADATA_SPEC.to_string(),
-                name: "Groovy NEARvember non-fungible token".to_string(),
-                symbol: "GROOVY".to_string(),
+                name: "Example NEAR non-fungible token".to_string(),
+                symbol: "EXAMPLE".to_string(),
                 icon: Some(DATA_IMAGE_SVG_NEAR_ICON.to_string()),
                 base_uri: None,
                 reference: None,
@@ -133,8 +133,8 @@ mod tests {
 
     fn sample_token_metadata() -> TokenMetadata {
         TokenMetadata {
-            title: Some("Groovy rabbit".into()),
-            description: Some("Funny rabbit my daughter drew".into()),
+            title: Some("Olympus Mons".into()),
+            description: Some("The tallest mountain in the charted solar system".into()),
             media: None,
             media_hash: None,
             copies: Some(1u64),
