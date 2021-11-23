@@ -15,7 +15,6 @@ export default function App() {
 
   // after submitting the form, we want to show Notification
   const [showNotification, setShowNotification] = React.useState(false)
-  const [isMinted, setIsMinted] = React.useState(false)
 
   // The useEffect hook can be used to fire side-effects during render
   // Learn more: https://reactjs.org/docs/hooks-intro.html
@@ -61,8 +60,6 @@ export default function App() {
       </button>
       <main>
         <img className="nft" src={IMAGE_LINK} />
-        
-        {!isMinted ?
           <div className="before">
             Hi
               {' '/* React trims whitespace around tags; insert literal space character when needed */}
@@ -92,6 +89,7 @@ export default function App() {
                       copies: 1
                     }
                   }, '100000000000000', '10000000000000000000000')
+                  setIsMinted(true)
               } catch (e) {
                 alert(
                   'Something went wrong! ' +
@@ -103,10 +101,9 @@ export default function App() {
                 // re-enable the form, whether the call succeeded or failed
                 fieldset.disabled = false
               }
-
               // show Notification
               setShowNotification(true)
-              setIsMinted(true)
+
               // remove Notification again after css animation completes
               // this allows it to be shown again next time the form is submitted
               setTimeout(() => {
@@ -122,11 +119,9 @@ export default function App() {
               </fieldset>
             </form>
           </div>
-        :
           <div className="after">
             <p>Please find your new NFT in your <a target="_blank" rel="noreferrer" href="https://wallet.testnet.near.org/?tab=collectibles">wallet</a></p>
           </div>
-        }
       </main>
       {showNotification && <Notification />}
     </>
