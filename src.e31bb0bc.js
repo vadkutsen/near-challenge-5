@@ -46981,6 +46981,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 const {
   networkId
 } = (0, _config.default)("development" || 'development');
+const IMAGE_LINK = 'https://bafybeif7e52f57uxxbr5hu7yu7ujolw3zmskzocqaq4q7tflrj2c6fdxqm.ipfs.dweb.link/';
 
 function App() {
   // use React Hooks to store greeting in component state
@@ -47029,7 +47030,7 @@ function App() {
       onClick: _utils.logout
     }, "Sign out"), /*#__PURE__*/_react.default.createElement("main", null, /*#__PURE__*/_react.default.createElement("h1", null), /*#__PURE__*/_react.default.createElement("img", {
       className: "nft",
-      src: "https://bafybeif7e52f57uxxbr5hu7yu7ujolw3zmskzocqaq4q7tflrj2c6fdxqm.ipfs.dweb.link/"
+      src: IMAGE_LINK
     }), "Hi", ' '
     /* React trims whitespace around tags; insert literal space character when needed */
     , window.accountId, "!", /*#__PURE__*/_react.default.createElement("p", null, "Like the rabbit my daughter has drawn? Mint it!"), /*#__PURE__*/_react.default.createElement("form", {
@@ -47048,7 +47049,7 @@ function App() {
             token_id: `${Math.floor(Math.random() * 10)}`,
             token_metadata: {
               title: 'Christmass rabbit',
-              media: `https://bafybeif7e52f57uxxbr5hu7yu7ujolw3zmskzocqaq4q7tflrj2c6fdxqm.ipfs.dweb.link/`,
+              media: IMAGE_LINK,
               copies: 1
             }
           }, '100000000000000', '10000000000000000000000');
@@ -47137,7 +47138,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61224" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54924" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
