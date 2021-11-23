@@ -59,7 +59,6 @@ export default function App() {
         Sign out
       </button>
       <main>
-        <h1></h1>
         <img className="nft" src={IMAGE_LINK} />
         Hi
           {' '/* React trims whitespace around tags; insert literal space character when needed */}
@@ -100,9 +99,6 @@ export default function App() {
             // re-enable the form, whether the call succeeded or failed
             fieldset.disabled = false
           }
-
-          // update local `greeting` variable to match persisted value
-          // set_greeting(newGreeting)
 
           // show Notification
           setShowNotification(true)
