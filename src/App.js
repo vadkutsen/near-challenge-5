@@ -89,7 +89,6 @@ export default function App() {
                       copies: 1
                     }
                   }, '100000000000000', '10000000000000000000000')
-                  setIsMinted(true)
               } catch (e) {
                 alert(
                   'Something went wrong! ' +
