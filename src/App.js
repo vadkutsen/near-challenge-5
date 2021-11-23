@@ -62,7 +62,7 @@ export default function App() {
       <main>
         <img className="nft" src={IMAGE_LINK} />
         
-        {isMinted ?
+        {!isMinted ?
           <div className="before">
             Hi
               {' '/* React trims whitespace around tags; insert literal space character when needed */}
@@ -124,7 +124,7 @@ export default function App() {
           </div>
         :
           <div className="after">
-            <p>Find your new NFT in your <a target="_blank" rel="noreferrer" href="https://wallet.testnet.near.org/?tab=collectibles">wallet</a></p>
+            <p>Please find your new NFT in your <a target="_blank" rel="noreferrer" href="https://wallet.testnet.near.org/?tab=collectibles">wallet</a></p>
           </div>
         }
       </main>
